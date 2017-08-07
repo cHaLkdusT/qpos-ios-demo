@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00A90031183B08B100D22572 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A90030183B08B100D22572 /* Foundation.framework */; };
+		00A90033183B08B100D22572 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A90032183B08B100D22572 /* CoreGraphics.framework */; };
+		00A90035183B08B100D22572 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A90034183B08B100D22572 /* UIKit.framework */; };
+		00A9003B183B08B100D22572 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00A90039183B08B100D22572 /* InfoPlist.strings */; };
+		00A9003D183B08B100D22572 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9003C183B08B100D22572 /* main.m */; };
+		00A90041183B08B100D22572 /* MainAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A90040183B08B100D22572 /* MainAppDelegate.m */; };
+		00A90047183B08B100D22572 /* MainMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A90046183B08B100D22572 /* MainMasterViewController.m */; };
+		00A9004A183B08B100D22572 /* MainDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A90049183B08B100D22572 /* MainDetailViewController.m */; };
+		00A9004C183B08B100D22572 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A9004B183B08B100D22572 /* Images.xcassets */; };
+		00A90053183B08B100D22572 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A90052183B08B100D22572 /* XCTest.framework */; };
+		00A90054183B08B100D22572 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A90030183B08B100D22572 /* Foundation.framework */; };
+		00A90055183B08B100D22572 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A90034183B08B100D22572 /* UIKit.framework */; };
+		00A9005D183B08B100D22572 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00A9005B183B08B100D22572 /* InfoPlist.strings */; };
+		00A9005F183B08B100D22572 /* qpos_ios_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9005E183B08B100D22572 /* qpos_ios_demoTests.m */; };
+		00A90070183B0B0400D22572 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A9006F183B0B0400D22572 /* CoreBluetooth.framework */; };
+		4B86A8CB1B2E75AD00B95485 /* 1801.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4B86A8CA1B2E75AD00B95485 /* 1801.wav */; };
+		6B2788B51883D4210095A338 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2788B41883D4210095A338 /* AVFoundation.framework */; };
+		6B2788B71883D4290095A338 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2788B61883D4290095A338 /* AudioToolbox.framework */; };
+		6B92F87B1C2E70B3008EC77B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B92F87A1C2E70B3008EC77B /* Launch Screen.storyboard */; };
+		6B95E13F190F94E500055ACC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B95E13E190F94E500055ACC /* MediaPlayer.framework */; };
+		7512AE0B1F2A12740028AA6B /* A27CAYC.asc in Resources */ = {isa = PBXBuildFile; fileRef = 7512AE0A1F2A12740028AA6B /* A27CAYC.asc */; };
+		7512AE0D1F2AD6780028AA6B /* A19K.asc in Resources */ = {isa = PBXBuildFile; fileRef = 7512AE0C1F2AD6780028AA6B /* A19K.asc */; };
+		7559C92C1F13323500D5EE86 /* upgrader.asc in Resources */ = {isa = PBXBuildFile; fileRef = 7559C92B1F13323500D5EE86 /* upgrader.asc */; };
+		7593D5BB1EF3CC9F00B62EED /* capk_.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7593D5B91EF3CC9F00B62EED /* capk_.bin */; };
+		7593D5BC1EF3CC9F00B62EED /* kernel_app_.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */; };
+		75C3970E1ECF0B8300682D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C3970D1ECF0B8300682D13 /* Main.storyboard */; };
+		75FE2A651ECEFC40001DA427 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE2A641ECEFC40001DA427 /* MainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00A90056183B08B100D22572 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00A90025183B08B100D22572 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A9002C183B08B100D22572;
+			remoteInfo = "qpos-ios-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A9002D183B08B100D22572 /* qpos-ios-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qpos-ios-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A90030183B08B100D22572 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		00A90032183B08B100D22572 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		00A90034183B08B100D22572 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		00A90038183B08B100D22572 /* qpos-ios-demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "qpos-ios-demo-Info.plist"; sourceTree = "<group>"; };
+		00A9003A183B08B100D22572 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		00A9003C183B08B100D22572 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00A9003E183B08B100D22572 /* qpos-ios-demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "qpos-ios-demo-Prefix.pch"; sourceTree = "<group>"; };
+		00A9003F183B08B100D22572 /* MainAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainAppDelegate.h; sourceTree = "<group>"; };
+		00A90040183B08B100D22572 /* MainAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainAppDelegate.m; sourceTree = "<group>"; };
+		00A90045183B08B100D22572 /* MainMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMasterViewController.h; sourceTree = "<group>"; };
+		00A90046183B08B100D22572 /* MainMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMasterViewController.m; sourceTree = "<group>"; };
+		00A90048183B08B100D22572 /* MainDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainDetailViewController.h; sourceTree = "<group>"; };
+		00A90049183B08B100D22572 /* MainDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainDetailViewController.m; sourceTree = "<group>"; };
+		00A9004B183B08B100D22572 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		00A90051183B08B100D22572 /* qpos-ios-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "qpos-ios-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A90052183B08B100D22572 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		00A9005A183B08B100D22572 /* qpos-ios-demoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "qpos-ios-demoTests-Info.plist"; sourceTree = "<group>"; };
+		00A9005C183B08B100D22572 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		00A9005E183B08B100D22572 /* qpos_ios_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qpos_ios_demoTests.m; sourceTree = "<group>"; };
+		00A9006F183B0B0400D22572 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		4B86A8CA1B2E75AD00B95485 /* 1801.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1801.wav; sourceTree = "<group>"; };
+		6B2788B41883D4210095A338 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6B2788B61883D4290095A338 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6B92F87A1C2E70B3008EC77B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "qpos-ios-demo/Images.xcassets/LaunchImage.launchimage/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6B95E13E190F94E500055ACC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6BB1DC061A5942B6009F40CD /* BTDeviceFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDeviceFinder.h; sourceTree = "<group>"; };
+		6BB1DC081A5942B6009F40CD /* QPOSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QPOSService.h; sourceTree = "<group>"; };
+		6BB1DC091A5942B6009F40CD /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		7512AE0A1F2A12740028AA6B /* A27CAYC.asc */ = {isa = PBXFileReference; lastKnownFileType = file; path = A27CAYC.asc; sourceTree = "<group>"; };
+		7512AE0C1F2AD6780028AA6B /* A19K.asc */ = {isa = PBXFileReference; lastKnownFileType = file; path = A19K.asc; sourceTree = "<group>"; };
+		7559C92B1F13323500D5EE86 /* upgrader.asc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgrader.asc; sourceTree = "<group>"; };
+		7593D5B91EF3CC9F00B62EED /* capk_.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = capk_.bin; sourceTree = "<group>"; };
+		7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = kernel_app_.bin; sourceTree = "<group>"; };
+		75C3970D1ECF0B8300682D13 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		75FE2A631ECEFC40001DA427 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		75FE2A641ECEFC40001DA427 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00A9002A183B08B100D22572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B95E13F190F94E500055ACC /* MediaPlayer.framework in Frameworks */,
+				6B2788B71883D4290095A338 /* AudioToolbox.framework in Frameworks */,
+				6B2788B51883D4210095A338 /* AVFoundation.framework in Frameworks */,
+				00A90070183B0B0400D22572 /* CoreBluetooth.framework in Frameworks */,
+				00A90033183B08B100D22572 /* CoreGraphics.framework in Frameworks */,
+				00A90035183B08B100D22572 /* UIKit.framework in Frameworks */,
+				00A90031183B08B100D22572 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A9004E183B08B100D22572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A90053183B08B100D22572 /* XCTest.framework in Frameworks */,
+				00A90055183B08B100D22572 /* UIKit.framework in Frameworks */,
+				00A90054183B08B100D22572 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00A90024183B08B100D22572 = {
+			isa = PBXGroup;
+			children = (
+				6B92F87A1C2E70B3008EC77B /* Launch Screen.storyboard */,
+				6BB1DC051A5942B6009F40CD /* pos-ios-sdk-lib */,
+				00A90036183B08B100D22572 /* qpos-ios-demo */,
+				00A90058183B08B100D22572 /* qpos-ios-demoTests */,
+				00A9002F183B08B100D22572 /* Frameworks */,
+				00A9002E183B08B100D22572 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00A9002E183B08B100D22572 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00A9002D183B08B100D22572 /* qpos-ios-demo.app */,
+				00A90051183B08B100D22572 /* qpos-ios-demoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00A9002F183B08B100D22572 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B95E13E190F94E500055ACC /* MediaPlayer.framework */,
+				6B2788B61883D4290095A338 /* AudioToolbox.framework */,
+				6B2788B41883D4210095A338 /* AVFoundation.framework */,
+				00A9006F183B0B0400D22572 /* CoreBluetooth.framework */,
+				00A90030183B08B100D22572 /* Foundation.framework */,
+				00A90032183B08B100D22572 /* CoreGraphics.framework */,
+				00A90034183B08B100D22572 /* UIKit.framework */,
+				00A90052183B08B100D22572 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00A90036183B08B100D22572 /* qpos-ios-demo */ = {
+			isa = PBXGroup;
+			children = (
+				7512AE0C1F2AD6780028AA6B /* A19K.asc */,
+				7512AE0A1F2A12740028AA6B /* A27CAYC.asc */,
+				7559C92B1F13323500D5EE86 /* upgrader.asc */,
+				7593D5B91EF3CC9F00B62EED /* capk_.bin */,
+				7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */,
+				6B2EA682183C7C5000E152CD /* iPad */,
+				00A9003F183B08B100D22572 /* MainAppDelegate.h */,
+				00A90040183B08B100D22572 /* MainAppDelegate.m */,
+				00A90045183B08B100D22572 /* MainMasterViewController.h */,
+				00A90046183B08B100D22572 /* MainMasterViewController.m */,
+				00A90048183B08B100D22572 /* MainDetailViewController.h */,
+				00A90049183B08B100D22572 /* MainDetailViewController.m */,
+				00A9004B183B08B100D22572 /* Images.xcassets */,
+				00A90037183B08B100D22572 /* Supporting Files */,
+				75C3970D1ECF0B8300682D13 /* Main.storyboard */,
+			);
+			path = "qpos-ios-demo";
+			sourceTree = "<group>";
+		};
+		00A90037183B08B100D22572 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B86A8CA1B2E75AD00B95485 /* 1801.wav */,
+				00A90038183B08B100D22572 /* qpos-ios-demo-Info.plist */,
+				00A90039183B08B100D22572 /* InfoPlist.strings */,
+				00A9003C183B08B100D22572 /* main.m */,
+				00A9003E183B08B100D22572 /* qpos-ios-demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00A90058183B08B100D22572 /* qpos-ios-demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				00A9005E183B08B100D22572 /* qpos_ios_demoTests.m */,
+				00A90059183B08B100D22572 /* Supporting Files */,
+			);
+			path = "qpos-ios-demoTests";
+			sourceTree = "<group>";
+		};
+		00A90059183B08B100D22572 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00A9005A183B08B100D22572 /* qpos-ios-demoTests-Info.plist */,
+				00A9005B183B08B100D22572 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B2EA682183C7C5000E152CD /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				75FE2A631ECEFC40001DA427 /* MainViewController.h */,
+				75FE2A641ECEFC40001DA427 /* MainViewController.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		6BB1DC051A5942B6009F40CD /* pos-ios-sdk-lib */ = {
+			isa = PBXGroup;
+			children = (
+				6BB1DC061A5942B6009F40CD /* BTDeviceFinder.h */,
+				6BB1DC081A5942B6009F40CD /* QPOSService.h */,
+				6BB1DC091A5942B6009F40CD /* Util.h */,
+			);
+			path = "pos-ios-sdk-lib";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00A9002C183B08B100D22572 /* qpos-ios-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00A90062183B08B100D22572 /* Build configuration list for PBXNativeTarget "qpos-ios-demo" */;
+			buildPhases = (
+				00A90029183B08B100D22572 /* Sources */,
+				00A9002A183B08B100D22572 /* Frameworks */,
+				00A9002B183B08B100D22572 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "qpos-ios-demo";
+			productName = "qpos-ios-demo";
+			productReference = 00A9002D183B08B100D22572 /* qpos-ios-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00A90050183B08B100D22572 /* qpos-ios-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00A90065183B08B100D22572 /* Build configuration list for PBXNativeTarget "qpos-ios-demoTests" */;
+			buildPhases = (
+				00A9004D183B08B100D22572 /* Sources */,
+				00A9004E183B08B100D22572 /* Frameworks */,
+				00A9004F183B08B100D22572 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00A90057183B08B100D22572 /* PBXTargetDependency */,
+			);
+			name = "qpos-ios-demoTests";
+			productName = "qpos-ios-demoTests";
+			productReference = 00A90051183B08B100D22572 /* qpos-ios-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00A90025183B08B100D22572 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Main;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Robin;
+				TargetAttributes = {
+					00A9002C183B08B100D22572 = {
+						DevelopmentTeam = TH87L5A39V;
+						ProvisioningStyle = Automatic;
+					};
+					00A90050183B08B100D22572 = {
+						DevelopmentTeam = TH87L5A39V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 00A9002C183B08B100D22572;
+					};
+				};
+			};
+			buildConfigurationList = 00A90028183B08B100D22572 /* Build configuration list for PBXProject "qpos-ios-demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00A90024183B08B100D22572;
+			productRefGroup = 00A9002E183B08B100D22572 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00A9002C183B08B100D22572 /* qpos-ios-demo */,
+				00A90050183B08B100D22572 /* qpos-ios-demoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00A9002B183B08B100D22572 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A9004C183B08B100D22572 /* Images.xcassets in Resources */,
+				75C3970E1ECF0B8300682D13 /* Main.storyboard in Resources */,
+				00A9003B183B08B100D22572 /* InfoPlist.strings in Resources */,
+				7559C92C1F13323500D5EE86 /* upgrader.asc in Resources */,
+				7593D5BC1EF3CC9F00B62EED /* kernel_app_.bin in Resources */,
+				7512AE0D1F2AD6780028AA6B /* A19K.asc in Resources */,
+				4B86A8CB1B2E75AD00B95485 /* 1801.wav in Resources */,
+				7593D5BB1EF3CC9F00B62EED /* capk_.bin in Resources */,
+				7512AE0B1F2A12740028AA6B /* A27CAYC.asc in Resources */,
+				6B92F87B1C2E70B3008EC77B /* Launch Screen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A9004F183B08B100D22572 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A9005D183B08B100D22572 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00A90029183B08B100D22572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A9004A183B08B100D22572 /* MainDetailViewController.m in Sources */,
+				00A9003D183B08B100D22572 /* main.m in Sources */,
+				00A90047183B08B100D22572 /* MainMasterViewController.m in Sources */,
+				75FE2A651ECEFC40001DA427 /* MainViewController.m in Sources */,
+				00A90041183B08B100D22572 /* MainAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A9004D183B08B100D22572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A9005F183B08B100D22572 /* qpos_ios_demoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00A90057183B08B100D22572 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A9002C183B08B100D22572 /* qpos-ios-demo */;
+			targetProxy = 00A90056183B08B100D22572 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		00A90039183B08B100D22572 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00A9003A183B08B100D22572 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		00A9005B183B08B100D22572 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00A9005C183B08B100D22572 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00A90060183B08B100D22572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Longhui Xiao (234E9HMZ3X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Longhui Xiao (234E9HMZ3X)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		00A90061183B08B100D22572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dspread Technology Co., Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dspread Technology Co., Ltd";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00A90063183B08B100D22572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TH87L5A39V;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "qpos-ios-demo/qpos-ios-demo-Prefix.pch";
+				INFOPLIST_FILE = "qpos-ios-demo/qpos-ios-demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"./pos-ios-sdk-lib",
+					"$(PROJECT_DIR)/pos-ios-sdk-lib",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/qpos-ios-demo",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.dspread.qpos-ios-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		00A90064183B08B100D22572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TH87L5A39V;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "qpos-ios-demo/qpos-ios-demo-Prefix.pch";
+				INFOPLIST_FILE = "qpos-ios-demo/qpos-ios-demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"./pos-ios-sdk-lib",
+					"$(PROJECT_DIR)/pos-ios-sdk-lib",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/qpos-ios-demo",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.dspread.qpos-ios-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		00A90066183B08B100D22572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/qpos-ios-demo.app/qpos-ios-demo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TH87L5A39V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "qpos-ios-demo/qpos-ios-demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "qpos-ios-demoTests/qpos-ios-demoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		00A90067183B08B100D22572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/qpos-ios-demo.app/qpos-ios-demo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TH87L5A39V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "qpos-ios-demo/qpos-ios-demo-Prefix.pch";
+				INFOPLIST_FILE = "qpos-ios-demoTests/qpos-ios-demoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00A90028183B08B100D22572 /* Build configuration list for PBXProject "qpos-ios-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A90060183B08B100D22572 /* Debug */,
+				00A90061183B08B100D22572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A90062183B08B100D22572 /* Build configuration list for PBXNativeTarget "qpos-ios-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A90063183B08B100D22572 /* Debug */,
+				00A90064183B08B100D22572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A90065183B08B100D22572 /* Build configuration list for PBXNativeTarget "qpos-ios-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A90066183B08B100D22572 /* Debug */,
+				00A90067183B08B100D22572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00A90025183B08B100D22572 /* Project object */;
+}
