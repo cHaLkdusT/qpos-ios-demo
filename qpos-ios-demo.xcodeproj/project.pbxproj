@@ -34,6 +34,7 @@
 		7593D5BC1EF3CC9F00B62EED /* kernel_app_.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */; };
 		75C3970E1ECF0B8300682D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C3970D1ECF0B8300682D13 /* Main.storyboard */; };
 		75FE2A651ECEFC40001DA427 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE2A641ECEFC40001DA427 /* MainViewController.m */; };
+		E4D0788A1F399E0500E9A143 /* libqpos-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D078891F399E0500E9A143 /* libqpos-ios-sdk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		75C3970D1ECF0B8300682D13 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		75FE2A631ECEFC40001DA427 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		75FE2A641ECEFC40001DA427 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E4D078891F399E0500E9A143 /* libqpos-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libqpos-ios-sdk.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B95E13F190F94E500055ACC /* MediaPlayer.framework in Frameworks */,
+				E4D0788A1F399E0500E9A143 /* libqpos-ios-sdk.a in Frameworks */,
 				6B2788B71883D4290095A338 /* AudioToolbox.framework in Frameworks */,
 				6B2788B51883D4210095A338 /* AVFoundation.framework in Frameworks */,
 				00A90070183B0B0400D22572 /* CoreBluetooth.framework in Frameworks */,
@@ -214,6 +217,7 @@
 		6BB1DC051A5942B6009F40CD /* pos-ios-sdk-lib */ = {
 			isa = PBXGroup;
 			children = (
+				E4D078891F399E0500E9A143 /* libqpos-ios-sdk.a */,
 				6BB1DC061A5942B6009F40CD /* BTDeviceFinder.h */,
 				6BB1DC081A5942B6009F40CD /* QPOSService.h */,
 				6BB1DC091A5942B6009F40CD /* Util.h */,
