@@ -184,6 +184,20 @@ typedef NS_ENUM(NSInteger, DoTradeMode) {//不需要对外提供
     DoTradeMode_IS_DEBIT_OR_CREDIT//
 };
 
+typedef NS_ENUM(NSInteger, DoTradeLog) {
+    DoTradeLog_clear = 0, // For clearing logs
+    DoTradeLog_getAllCount = 1, // For getting log counter
+    DoTradeLog_getOneLog = 2 // For getting specific log
+    
+};
+
+typedef NS_ENUM(NSInteger, MARK_TYPE) {
+    MARK_TYPE_MCR = 0, // Swipe
+    MARK_TYPE_ICC = 99, // Insert
+    MARK_TYPE_NFC = 3, // Tap
+    MARK_TYPE_CLEAR = 6, // Clear log
+    MARK_TYPE_OTHER = 8 // Do nothing for this enum, for qingqing to identify the type of the cmd
+};
 
 @protocol QPOSServiceListener<NSObject>
 
@@ -651,14 +665,26 @@ typedef NS_ENUM(NSInteger, DoTradeMode) {//不需要对外提供
 -(void)isCardExist:(NSInteger)timeout withResultBlock:(void (^)(BOOL))isCardExistBlock;
 -(void)setBTAutoDetecting: (BOOL)flag;
 -(BOOL) connectBluetoothNoScan: (NSString*)bluetoothName;
--(void)doTradeLogOperation:(NSInteger)operationType
+/**
+ Use this function to get transaction logs if transaction was made using quick EMV
+ 
+ @param operationType Trade log procedure
+ @param data If operation type is `.getOneLog`, pass index value here, else, always pass `0`
+ @param doTradeLogBlock Callback handler. `isSuccess` is the command was sent and peripheral responded successfully;
+ `markType` is the transaction type (such as inserting card, swiping card, or tapping card).
+ `stateStr` is the result returned by the command
+ */
+// markType => 0: swipe,
+-(void)doTradeLogOperation:(DoTradeLog)operationType
                       data:(NSInteger)data
-                     block:(void(^)(BOOL isSuccess,NSInteger markType, NSDictionary *stateStr))doTradeLogBlock;
+                     block:(void(^)(BOOL isSuccess, MARK_TYPE markType, NSDictionary *stateStr))doTradeLogBlock;
 -(void)setFormatID:(NSString *)formatID;
 //-(BOOL) connectBluetoothBLEByCBPeripheral: ( CBPeripheral*)myCBPeripheral;
 
--(NSDictionary *)syncDoTradeLogOperation:(NSInteger)type
+-(NSDictionary *)syncDoTradeLogOperation:(DoTradeLog)type
                                     data:(NSInteger)data;
+- (void)sendApdu:(NSString *)apdu
+           block:(void (^)(BOOL isSuccess, NSData *result))sendApduBlock;
 -(NSInteger)getTransactionCount;
 -(void)setIsQuickEMV:(BOOL)isQuickEMV
                block:(void(^)(BOOL isSuccess,NSString *stateStr))setIsQuickEmvBlock;
