@@ -1062,7 +1062,7 @@
     mTransType = TransactionType_GOODS;
     _currencyCode = @"704";
    // [pos doCheckCard:30 keyIndex:0];
-    [pos setCardTradeMode:CardTradeMode_ONLY_TAP_CARD];
+    [pos setCardTradeMode:CardTradeMode_UNALLOWED_LOW_TRADE];
     [pos doTrade:30 batchID:@"swipe1"];
     
     //    [pos setCardTradeMode:CardTradeMode_UNALLOWED_LOW_TRADE];

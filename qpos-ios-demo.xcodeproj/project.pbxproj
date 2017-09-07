@@ -29,12 +29,12 @@
 		6B95E13F190F94E500055ACC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B95E13E190F94E500055ACC /* MediaPlayer.framework */; };
 		7512AE0B1F2A12740028AA6B /* A27CAYC.asc in Resources */ = {isa = PBXBuildFile; fileRef = 7512AE0A1F2A12740028AA6B /* A27CAYC.asc */; };
 		7512AE0D1F2AD6780028AA6B /* A19K.asc in Resources */ = {isa = PBXBuildFile; fileRef = 7512AE0C1F2AD6780028AA6B /* A19K.asc */; };
-		754DEB731F3B356D00045D5F /* libqpos-ios-sdk-1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 754DEB721F3B356D00045D5F /* libqpos-ios-sdk-1.a */; };
 		7559C92C1F13323500D5EE86 /* upgrader.asc in Resources */ = {isa = PBXBuildFile; fileRef = 7559C92B1F13323500D5EE86 /* upgrader.asc */; };
 		7593D5BB1EF3CC9F00B62EED /* capk_.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7593D5B91EF3CC9F00B62EED /* capk_.bin */; };
 		7593D5BC1EF3CC9F00B62EED /* kernel_app_.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */; };
 		75C3970E1ECF0B8300682D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C3970D1ECF0B8300682D13 /* Main.storyboard */; };
 		75FE2A651ECEFC40001DA427 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE2A641ECEFC40001DA427 /* MainViewController.m */; };
+		C73C1FCB1F61228800748603 /* libqpos-ios-sdk-v2.2.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C73C1FCA1F61228800748603 /* libqpos-ios-sdk-v2.2.8.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +79,13 @@
 		6BB1DC091A5942B6009F40CD /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		7512AE0A1F2A12740028AA6B /* A27CAYC.asc */ = {isa = PBXFileReference; lastKnownFileType = file; path = A27CAYC.asc; sourceTree = "<group>"; };
 		7512AE0C1F2AD6780028AA6B /* A19K.asc */ = {isa = PBXFileReference; lastKnownFileType = file; path = A19K.asc; sourceTree = "<group>"; };
-		754DEB721F3B356D00045D5F /* libqpos-ios-sdk-1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libqpos-ios-sdk-1.a"; path = "../libqpos-ios-sdk-1.a"; sourceTree = "<group>"; };
 		7559C92B1F13323500D5EE86 /* upgrader.asc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgrader.asc; sourceTree = "<group>"; };
 		7593D5B91EF3CC9F00B62EED /* capk_.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = capk_.bin; sourceTree = "<group>"; };
 		7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = kernel_app_.bin; sourceTree = "<group>"; };
 		75C3970D1ECF0B8300682D13 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		75FE2A631ECEFC40001DA427 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		75FE2A641ECEFC40001DA427 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C73C1FCA1F61228800748603 /* libqpos-ios-sdk-v2.2.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libqpos-ios-sdk-v2.2.8.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 			files = (
 				6B95E13F190F94E500055ACC /* MediaPlayer.framework in Frameworks */,
 				6B2788B71883D4290095A338 /* AudioToolbox.framework in Frameworks */,
-				754DEB731F3B356D00045D5F /* libqpos-ios-sdk-1.a in Frameworks */,
 				6B2788B51883D4210095A338 /* AVFoundation.framework in Frameworks */,
+				C73C1FCB1F61228800748603 /* libqpos-ios-sdk-v2.2.8.a in Frameworks */,
 				00A90070183B0B0400D22572 /* CoreBluetooth.framework in Frameworks */,
 				00A90033183B08B100D22572 /* CoreGraphics.framework in Frameworks */,
 				00A90035183B08B100D22572 /* UIKit.framework in Frameworks */,
@@ -217,7 +217,7 @@
 		6BB1DC051A5942B6009F40CD /* pos-ios-sdk-lib */ = {
 			isa = PBXGroup;
 			children = (
-				754DEB721F3B356D00045D5F /* libqpos-ios-sdk-1.a */,
+				C73C1FCA1F61228800748603 /* libqpos-ios-sdk-v2.2.8.a */,
 				6BB1DC061A5942B6009F40CD /* BTDeviceFinder.h */,
 				6BB1DC081A5942B6009F40CD /* QPOSService.h */,
 				6BB1DC091A5942B6009F40CD /* Util.h */,
@@ -480,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-com.dspread.qpos-ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -509,7 +509,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-com.dspread.qpos-ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
