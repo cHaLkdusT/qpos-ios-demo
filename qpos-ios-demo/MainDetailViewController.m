@@ -695,6 +695,11 @@
     msgStr = @"Please set pin";
     
 }
+- (IBAction)getTradeCount:(id)sender {
+    NSDictionary *a = [pos syncDoTradeLogOperation:1 data:0];
+    self.textViewLog.text = [a valueForKey:@"log"];
+}
+
 
 -(void) onReturnSetMasterKeyResult: (BOOL)isSuccess{
     if(isSuccess){

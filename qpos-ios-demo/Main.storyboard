@@ -330,6 +330,16 @@
                                             <action selector="getOnLineToolData:" destination="mHT-30-Oa7" eventType="touchUpInside" id="F8Z-Qh-any"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRj-NZ-Kl3">
+                                        <rect key="frame" x="-4" y="399" width="115" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.84060612469999996" green="1" blue="0.7553496904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="getTradeCount"/>
+                                        <connections>
+                                            <action selector="getTradeCount:" destination="mHT-30-Oa7" eventType="touchUpInside" id="s0w-8A-qoQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
