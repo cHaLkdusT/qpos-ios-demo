@@ -830,8 +830,7 @@
         
     }else if ([msg isEqualToString:@"Request data to server."]){
         if ([pos getQuickEMV]) {
-           // [pos sendOnlineProcessResult:@"8A023033"];
-            [self onRequestTransactionResult:TransactionResult_DECLINED];
+            [pos sendOnlineProcessResult:@"8A023033"];
         }else{
             [pos sendOnlineProcessResult:@"8A023030"];
         }
@@ -878,7 +877,7 @@
         
     }else if ([aTitle isEqualToString:@"Request data to server."]){
         if ([pos getQuickEMV]) {
-            [pos sendOnlineProcessResult:@"8A023033"];
+
         }else{
             [pos sendOnlineProcessResult:@"8A023030"];
         }
@@ -1097,7 +1096,7 @@
    // [pos doCheckCard:30 keyIndex:0];
     //[pos setCardTradeMode:CardTradeMode_ONLY_TAP_CARD];
     __weak typeof(self)weakself = self;
-    [pos setIsQuickEMV:YES block:^(BOOL isSuccess, NSString *stateStr) {
+    [pos setIsQuickEMV:NO block:^(BOOL isSuccess, NSString *stateStr) {
         if (isSuccess) {
             weakself.textViewLog.text = @"set quick emv success";
         }
