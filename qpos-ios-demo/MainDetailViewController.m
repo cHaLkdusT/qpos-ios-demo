@@ -444,37 +444,42 @@
 //回调成功的alert
 -(void) onRequestOnlineProcess: (NSString*) tlv{
     
-    NSLog(@"onRequestOnlineProcess = %@",[[QPOSService sharedInstance] anlysEmvIccData:tlv]);
+//    NSLog(@"onRequestOnlineProcess = %@",[[QPOSService sharedInstance] anlysEmvIccData:tlv]);
     //    [self claMac];
-         [self batchSendAPDU];
+         //[self batchSendAPDU];
     //    [pos calcMacDouble_all:@"12345678123456781234567812345678" keyIndex:0 delay:5];
     //    [pos pinKey_TDES_all:0 pin:@"1122334455667788" delay:5];
     
     
    // NSDictionary *dict = [pos getICCTag:0 tagCount:1 tagArrStr:@"5F20"];
 
-    NSDictionary *dict9f01 = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f01"];
-    NSLog(@"dict9f01 = %@",dict9f01);
-    NSDictionary *dict9f15 = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f15"];
-    NSLog(@"dict9f15 = %@",dict9f15);
-    NSDictionary *dict9f45 = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f45"];
-    NSLog(@"dict9f45 = %@",dict9f45);
-    NSDictionary *dict9f1c = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f1c"];
-    NSLog(@"dict9f1c = %@",dict9f1c);
-    
-    NSString *msg = @"Replied success.";
-    msgStr = @"Request data to server.";
-    [self conductEventByMsg:msgStr];
-    
-    
-    mAlertView = [[UIAlertView new]
-                  initWithTitle:@"Request data to server."
-                  message:msg
-                  delegate:self
-                  cancelButtonTitle:@"Confirm"
-                  otherButtonTitles:nil,
-                  nil ];
-    [mAlertView show];
+//    NSDictionary *dict9f01 = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f01"];
+//    NSLog(@"dict9f01 = %@",dict9f01);
+//    NSDictionary *dict9f15 = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f15"];
+//    NSLog(@"dict9f15 = %@",dict9f15);
+//    NSDictionary *dict9f45 = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f45"];
+//    NSLog(@"dict9f45 = %@",dict9f45);
+//    NSDictionary *dict9f1c = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f1c"];
+//    NSLog(@"dict9f1c = %@",dict9f1c);
+    NSString *msg = nil;
+    if ([pos getQuickEMV]) {
+        msg = @"isQuickEMV";
+        msgStr = @"Request data to server.";
+        [self conductEventByMsg:msgStr];
+        
+    }else{
+        msg = @"Replied success.";
+        msgStr = @"Request data to server.";
+        mAlertView = [[UIAlertView new]
+                      initWithTitle:@"Request data to server."
+                      message:msg
+                      delegate:self
+                      cancelButtonTitle:@"Confirm"
+                      otherButtonTitles:nil,
+                      nil ];
+        [mAlertView show];
+    }
+//
     
     
 }
@@ -496,6 +501,7 @@
         messageTextView = @"Terminated";
     } else if(transactionResult == TransactionResult_DECLINED) {
         messageTextView = @"Declined";
+        
     } else if(transactionResult == TransactionResult_CANCEL) {
         [self clearDisplay];
         messageTextView = @"Cancel";
@@ -823,8 +829,13 @@
         [pos isServerConnected:YES];
         
     }else if ([msg isEqualToString:@"Request data to server."]){
-        
-        [pos sendOnlineProcessResult:@"8A023030"];
+        if ([pos getQuickEMV]) {
+           // [pos sendOnlineProcessResult:@"8A023033"];
+            [self onRequestTransactionResult:TransactionResult_DECLINED];
+        }else{
+            [pos sendOnlineProcessResult:@"8A023030"];
+        }
+      
         
     }else if ([msg isEqualToString:@"Transaction Result"]){
         
@@ -1081,6 +1092,12 @@
     _currencyCode = @"704";
    // [pos doCheckCard:30 keyIndex:0];
     //[pos setCardTradeMode:CardTradeMode_ONLY_TAP_CARD];
+    __weak typeof(self)weakself = self;
+    [pos setIsQuickEMV:NO block:^(BOOL isSuccess, NSString *stateStr) {
+        if (isSuccess) {
+            weakself.textViewLog.text = @"set quick emv success";
+        }
+    }];
     [pos doTrade:30 batchID:@"swipe1"];
     
     //    [pos setCardTradeMode:CardTradeMode_UNALLOWED_LOW_TRADE];
@@ -1508,7 +1525,7 @@
 //            }
 //        }];
     
-    NSDictionary * doTradeLogDictionary = [pos syncDoTradeLogOperation:2 data:0];
+    NSDictionary * doTradeLogDictionary = [pos syncDoTradeLogOperation:2 data:18];
     NSLog(@"%@",doTradeLogDictionary);
     //[pos doTrade:30];
     //  NSLog(@"doTradeLogDictionary = %@",doTradeLogDictionary);

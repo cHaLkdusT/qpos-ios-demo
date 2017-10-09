@@ -688,5 +688,6 @@ typedef NS_ENUM(NSInteger, MARK_TYPE) {
 -(NSInteger)getTransactionCount;
 -(void)setIsQuickEMV:(BOOL)isQuickEMV
                block:(void(^)(BOOL isSuccess,NSString *stateStr))setIsQuickEmvBlock;
+-(BOOL)getQuickEMV;
 @end
 
