@@ -1096,7 +1096,7 @@
    // [pos doCheckCard:30 keyIndex:0];
     //[pos setCardTradeMode:CardTradeMode_ONLY_TAP_CARD];
     __weak typeof(self)weakself = self;
-    [pos setIsQuickEMV:NO block:^(BOOL isSuccess, NSString *stateStr) {
+    [pos setIsQuickEMV:false block:^(BOOL isSuccess, NSString *stateStr) {
         if (isSuccess) {
             weakself.textViewLog.text = @"set quick emv success";
         }
