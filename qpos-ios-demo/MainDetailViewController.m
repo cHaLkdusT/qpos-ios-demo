@@ -461,14 +461,14 @@
 //    NSLog(@"dict9f45 = %@",dict9f45);
 //    NSDictionary *dict9f1c = [pos getICCTag:0 tagCount:1 tagArrStr:@"9f1c"];
 //    NSLog(@"dict9f1c = %@",dict9f1c);
-    NSString *msg = nil;
-    if ([pos getQuickEMV]) {
-        msg = @"isQuickEMV";
-        msgStr = @"Request data to server.";
-        [self conductEventByMsg:msgStr];
-        
-    }else{
-        msg = @"Replied success.";
+//    NSString *msg = nil;
+//    if ([pos getQuickEMV]) {
+//        msg = @"isQuickEMV";
+//        msgStr = @"Request data to server.";
+//        [self conductEventByMsg:msgStr];
+//        
+//    }else{
+        NSString* msg = @"Replied success.";
         msgStr = @"Request data to server.";
         mAlertView = [[UIAlertView new]
                       initWithTitle:@"Request data to server."
@@ -478,7 +478,7 @@
                       otherButtonTitles:nil,
                       nil ];
         [mAlertView show];
-    }
+//    }
 //
     
     
@@ -830,7 +830,7 @@
         
     }else if ([msg isEqualToString:@"Request data to server."]){
         if ([pos getQuickEMV]) {
-            [pos sendOnlineProcessResult:@"8A023033"];
+            [pos sendOnlineProcessResult:@"8A023030"];
         }else{
             [pos sendOnlineProcessResult:@"8A023030"];
         }
@@ -876,13 +876,9 @@
         [pos isServerConnected:YES];
         
     }else if ([aTitle isEqualToString:@"Request data to server."]){
-        if ([pos getQuickEMV]) {
 
-        }else{
-            [pos sendOnlineProcessResult:@"8A023030"];
-        }
-       
-        
+        [pos sendOnlineProcessResult:@"8A023035"];
+
     }else if ([aTitle isEqualToString:@"Transaction Result"]){
         
     }else if ([aTitle isEqualToString:@"Please set pin"]) {
@@ -1096,7 +1092,7 @@
    // [pos doCheckCard:30 keyIndex:0];
     //[pos setCardTradeMode:CardTradeMode_ONLY_TAP_CARD];
     __weak typeof(self)weakself = self;
-    [pos setIsQuickEMV:false block:^(BOOL isSuccess, NSString *stateStr) {
+    [pos setIsQuickEMV:true block:^(BOOL isSuccess, NSString *stateStr) {
         if (isSuccess) {
             weakself.textViewLog.text = @"set quick emv success";
         }
