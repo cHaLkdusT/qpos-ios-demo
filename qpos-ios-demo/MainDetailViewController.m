@@ -877,7 +877,7 @@
         
     }else if ([aTitle isEqualToString:@"Request data to server."]){
 
-        [pos sendOnlineProcessResult:@"8A023035"];
+        [pos sendOnlineProcessResult:@"8A023030"];
 
     }else if ([aTitle isEqualToString:@"Transaction Result"]){
         
