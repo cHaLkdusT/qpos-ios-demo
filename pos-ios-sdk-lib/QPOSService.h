@@ -185,9 +185,9 @@ typedef NS_ENUM(NSInteger, DoTradeMode) {//不需要对外提供
 };
 
 typedef NS_ENUM(NSInteger, DoTradeLog) {
-    DoTradeLog_clear , // For clearing logs
-    DoTradeLog_getAllCount, // For getting log counter
-    DoTradeLog_getOneLog  // For getting specific log
+    DoTradeLog_clear = 0, // For clearing logs
+    DoTradeLog_getAllCount = 1, // For getting log counter
+    DoTradeLog_getOneLog = 2 // For getting specific log
     
 };
 
