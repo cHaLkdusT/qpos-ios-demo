@@ -1090,9 +1090,9 @@
     mTransType = TransactionType_GOODS;
     _currencyCode = @"704";
    // [pos doCheckCard:30 keyIndex:0];
-    //[pos setCardTradeMode:CardTradeMode_ONLY_TAP_CARD];
+    [pos setCardTradeMode:CardTradeMode_SWIPE_TAP_INSERT_CARD];
     __weak typeof(self)weakself = self;
-    [pos setIsQuickEMV:false block:^(BOOL isSuccess, NSString *stateStr) {
+    [pos setIsQuickEMV:true block:^(BOOL isSuccess, NSString *stateStr) {
         if (isSuccess) {
             weakself.textViewLog.text = @"set quick emv success";
         }
@@ -1524,7 +1524,7 @@
 //            }
 //        }];
     
-    NSDictionary * doTradeLogDictionary = [pos syncDoTradeLogOperation:2 data:18];
+    NSDictionary * doTradeLogDictionary = [pos syncDoTradeLogOperation:2 data:0];
     NSLog(@"%@",doTradeLogDictionary);
     //[pos doTrade:30];
     //  NSLog(@"doTradeLogDictionary = %@",doTradeLogDictionary);
