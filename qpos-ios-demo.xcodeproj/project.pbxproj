@@ -32,7 +32,10 @@
 		7559C92C1F13323500D5EE86 /* upgrader.asc in Resources */ = {isa = PBXBuildFile; fileRef = 7559C92B1F13323500D5EE86 /* upgrader.asc */; };
 		7593D5BB1EF3CC9F00B62EED /* capk_.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7593D5B91EF3CC9F00B62EED /* capk_.bin */; };
 		7593D5BC1EF3CC9F00B62EED /* kernel_app_.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */; };
-		75C378E01F8F0C830022B646 /* libqpos-ios-sdk-1012.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C378DF1F8F0C830022B646 /* libqpos-ios-sdk-1012.a */; };
+		75C378E51F9065120022B646 /* libqpos-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C378E41F9065120022B646 /* libqpos-ios-sdk.a */; };
+		75C378F51F906C820022B646 /* SGLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C378F01F906C820022B646 /* SGLength.m */; };
+		75C378F61F906C820022B646 /* SGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C378F21F906C820022B646 /* SGTag.m */; };
+		75C378F71F906C820022B646 /* SGTLVDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C378F41F906C820022B646 /* SGTLVDecode.m */; };
 		75C3970E1ECF0B8300682D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C3970D1ECF0B8300682D13 /* Main.storyboard */; };
 		75FE2A651ECEFC40001DA427 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE2A641ECEFC40001DA427 /* MainViewController.m */; };
 /* End PBXBuildFile section */
@@ -82,7 +85,13 @@
 		7559C92B1F13323500D5EE86 /* upgrader.asc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgrader.asc; sourceTree = "<group>"; };
 		7593D5B91EF3CC9F00B62EED /* capk_.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = capk_.bin; sourceTree = "<group>"; };
 		7593D5BA1EF3CC9F00B62EED /* kernel_app_.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = kernel_app_.bin; sourceTree = "<group>"; };
-		75C378DF1F8F0C830022B646 /* libqpos-ios-sdk-1012.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libqpos-ios-sdk-1012.a"; sourceTree = "<group>"; };
+		75C378E41F9065120022B646 /* libqpos-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libqpos-ios-sdk.a"; sourceTree = "<group>"; };
+		75C378EF1F906C820022B646 /* SGLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLength.h; sourceTree = "<group>"; };
+		75C378F01F906C820022B646 /* SGLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGLength.m; sourceTree = "<group>"; };
+		75C378F11F906C820022B646 /* SGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTag.h; sourceTree = "<group>"; };
+		75C378F21F906C820022B646 /* SGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTag.m; sourceTree = "<group>"; };
+		75C378F31F906C820022B646 /* SGTLVDecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTLVDecode.h; sourceTree = "<group>"; };
+		75C378F41F906C820022B646 /* SGTLVDecode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTLVDecode.m; sourceTree = "<group>"; };
 		75C3970D1ECF0B8300682D13 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		75FE2A631ECEFC40001DA427 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		75FE2A641ECEFC40001DA427 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -94,7 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B95E13F190F94E500055ACC /* MediaPlayer.framework in Frameworks */,
-				75C378E01F8F0C830022B646 /* libqpos-ios-sdk-1012.a in Frameworks */,
+				75C378E51F9065120022B646 /* libqpos-ios-sdk.a in Frameworks */,
 				6B2788B71883D4290095A338 /* AudioToolbox.framework in Frameworks */,
 				6B2788B51883D4210095A338 /* AVFoundation.framework in Frameworks */,
 				00A90070183B0B0400D22572 /* CoreBluetooth.framework in Frameworks */,
@@ -217,7 +226,13 @@
 		6BB1DC051A5942B6009F40CD /* pos-ios-sdk-lib */ = {
 			isa = PBXGroup;
 			children = (
-				75C378DF1F8F0C830022B646 /* libqpos-ios-sdk-1012.a */,
+				75C378EF1F906C820022B646 /* SGLength.h */,
+				75C378F01F906C820022B646 /* SGLength.m */,
+				75C378F11F906C820022B646 /* SGTag.h */,
+				75C378F21F906C820022B646 /* SGTag.m */,
+				75C378F31F906C820022B646 /* SGTLVDecode.h */,
+				75C378F41F906C820022B646 /* SGTLVDecode.m */,
+				75C378E41F9065120022B646 /* libqpos-ios-sdk.a */,
 				6BB1DC061A5942B6009F40CD /* BTDeviceFinder.h */,
 				6BB1DC081A5942B6009F40CD /* QPOSService.h */,
 				6BB1DC091A5942B6009F40CD /* Util.h */,
@@ -337,8 +352,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A9004A183B08B100D22572 /* MainDetailViewController.m in Sources */,
+				75C378F61F906C820022B646 /* SGTag.m in Sources */,
 				00A9003D183B08B100D22572 /* main.m in Sources */,
 				00A90047183B08B100D22572 /* MainMasterViewController.m in Sources */,
+				75C378F71F906C820022B646 /* SGTLVDecode.m in Sources */,
+				75C378F51F906C820022B646 /* SGLength.m in Sources */,
 				75FE2A651ECEFC40001DA427 /* MainViewController.m in Sources */,
 				00A90041183B08B100D22572 /* MainAppDelegate.m in Sources */,
 			);
