@@ -198,7 +198,15 @@ typedef NS_ENUM(NSInteger, MARK_TYPE) {
     MARK_TYPE_CLEAR = 6, // Clear log
     MARK_TYPE_OTHER = 8 // Do nothing for this enum, for qingqing to identify the type of the cmd
 };
-
+typedef NS_ENUM(NSInteger,EMVOperation) {
+    EMVOperation_clear,
+    EMVOperation_add,
+    EMVOperation_delete,
+    EMVOperation_getList,
+    EMVOperation_update,
+    EMVOperation_quickemv
+    
+};
 @protocol QPOSServiceListener<NSObject>
 
 @optional
@@ -689,5 +697,11 @@ typedef NS_ENUM(NSInteger, MARK_TYPE) {
 -(void)setIsQuickEMV:(BOOL)isQuickEMV
                block:(void(^)(BOOL isSuccess,NSString *stateStr))setIsQuickEmvBlock;
 -(BOOL)getQuickEMV;
+
+-(NSMutableDictionary *)getEMVAPPDict;
+#pragma mark init emv capk
+-(NSMutableDictionary *)getEMVCAPKDict;
+-(void)updateEmvAPP:(NSInteger )operationType data:(NSArray*)data  block:(void (^)(BOOL isSuccess, NSString *stateStr))updateEMVAPPBlock;
+-(void)updateEmvCAPK:(NSInteger )operationType data:(NSArray *)data  block:(void (^)(BOOL isSuccess, NSString *stateStr))updateCAPKBlock;
 @end
 
